@@ -1,0 +1,24 @@
+# Entornos virtuales
+venv/
+venv_linux/
+env/
+.env
+
+# Dependencias Node
+node_modules/
+dist/
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Datasets crudos (para evitar superar límites de GitHub)
+Dataset/
+*.json.gz
+*.csv
+
+# Logs y Temp
+*.log
+.DS_Store

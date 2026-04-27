@@ -1,0 +1,10 @@
+pandas
+numpy
+scipy
+joblib
+implicit
+fastapi
+uvicorn
+streamlit
+python-multipart
+python-dateutil
