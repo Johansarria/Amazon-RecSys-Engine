@@ -1,73 +1,46 @@
-# React + TypeScript + Vite
+# Amazon RecSys Engine - Frontend 🎨
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este directorio contiene la capa de presentación visual para el motor de recomendaciones. Está construido como una aplicación **React** moderna, enfocada en la velocidad y el diseño de alta calidad.
 
-Currently, two official plugins are available:
+## 🛠️ Tecnologías Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Vite:** Build tool ultrarrápido para el entorno de desarrollo.
+- **React (TypeScript):** Librería principal para la construcción de interfaces tipadas y modulares.
+- **TailwindCSS:** Framework de utilidades CSS para un maquetado ágil.
 
-## React Compiler
+## 🌟 Diseño e Interfaz (Design System)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+La interfaz de usuario fue conceptualizada utilizando inteligencia artificial (Stitch MCP) para lograr un estilo híbrido entre **Dashboard Analítico** y **E-commerce Premium**.
 
-## Expanding the ESLint configuration
+- **Dark Mode Premium:** Fondo profundo (`#131314`) con acentos vibrantes en índigo y esmeralda.
+- **Glassmorphism:** Tarjetas y badges con efectos de desenfoque y bordes traslúcidos (`ghost-border`).
+- **Tipografías Dinámicas:** 
+  - `Inter` para legibilidad técnica y datos numéricos.
+  - `Newsreader` para los títulos editoriales y el logo principal.
+- **Indicadores de Precisión:** Gráficos circulares SVG generados dinámicamente que visualizan el "Match Score" calculado por el backend.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Instalación y Ejecución Local
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Para correr este frontend de manera independiente, necesitas tener **Node.js** instalado.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1. **Instalar dependencias:**
+   ```bash
+   npm install
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+2. **Levantar el servidor de desarrollo:**
+   ```bash
+   npm run dev
+   ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+El servidor estará disponible en `http://localhost:5173/`. 
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+> [!IMPORTANT]
+> **Requisito del Backend:**
+> Para que el dashboard muestre recomendaciones reales en lugar de errores, asegúrate de tener la API de FastAPI corriendo en `http://localhost:8000`.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📁 Estructura del Código
+- `src/App.tsx`: Layout principal, formulario de búsqueda y gestión de estados de la conexión con FastAPI.
+- `src/components/MagazineCard.tsx`: Componente modular para cada revista recomendada, con animaciones hover y soporte para *fallback* de imágenes rotas.
+- `src/index.css`: Inyección de directivas de TailwindCSS y variables globales del diseño.
+- `tailwind.config.js`: Tokens de diseño personalizados (colores, fuentes).
