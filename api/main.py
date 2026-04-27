@@ -11,7 +11,7 @@ PROCESSED_DIR = os.path.join(BASE_DIR, 'processed')
 
 from fastapi.middleware.cors import CORSMiddleware
 
-app = FastAPI(title="Amazon RecSys Engine API")
+app = FastAPI(title="Universal RecSys Engine API")
 
 # Habilitar CORS para el frontend (Vite por defecto en 5173 o Streamlit en 8501)
 app.add_middleware(

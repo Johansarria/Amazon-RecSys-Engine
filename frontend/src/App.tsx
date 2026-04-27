@@ -81,7 +81,7 @@ function App() {
                 type="text" 
                 value={userId}
                 onChange={(e) => setUserId(e.target.value)}
-                placeholder="Enter Amazon Reviewer ID..."
+                placeholder="Enter User ID..."
                 className="flex-1 bg-background border border-surface rounded-lg px-4 py-3 text-textPrimary focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
               />
               <button 

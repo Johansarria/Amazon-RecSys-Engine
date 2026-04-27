@@ -1,4 +1,4 @@
-# Amazon RecSys Engine - Frontend 🎨
+# Universal RecSys Engine - Frontend 🎨
 
 Este directorio contiene la capa de presentación visual para el motor de recomendaciones. Está construido como una aplicación **React** moderna, enfocada en la velocidad y el diseño de alta calidad.
 

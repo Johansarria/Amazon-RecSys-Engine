@@ -1,6 +1,6 @@
-# Amazon Magazine RecSys Engine 📖
+# Universal RecSys Engine 📖
 
-Un motor de recomendaciones híbrido (Collaborative Filtering) diseñado para procesar el dataset público de "Amazon Magazine Subscriptions", con una arquitectura robusta orientada a datos y escalabilidad en memoria.
+Un motor de recomendaciones híbrido (Collaborative Filtering) agnóstico de dominio, diseñado para procesar grandes volúmenes de datos mediante una arquitectura robusta orientada a escalabilidad en memoria. (Ejemplo actual: Dataset Universal).
 
 ## 🎯 Arquitectura de Datos y Modelado (Data & ML)
 
