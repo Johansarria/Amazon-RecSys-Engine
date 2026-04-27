@@ -27,6 +27,9 @@ El núcleo de este proyecto reside en su pipeline de procesamiento de datos y mo
 ```text
 ├── api/
 │   └── main.py              # Endpoints de FastAPI (Recomendaciones e Hidratación)
+├── docs/                    # Documentación y Assets Visuales
+│   ├── Plan de Arquitectura.pdf
+│   └── dashboard_design.jpg
 ├── frontend/
 │   ├── src/
 │   │   ├── components/      # Componentes UI (MagazineCard)
@@ -38,6 +41,8 @@ El núcleo de este proyecto reside en su pipeline de procesamiento de datos y mo
 │   ├── mapeos_ids.pkl       # "Piedra Rosetta" de conversión ID Amazon <-> Índice Matricial
 │   ├── train_matrix.pkl     # Matriz esparcida de interacciones
 │   └── asin_to_meta.pkl     # Catálogo en memoria de imágenes y metadatos
+├── prototypes/              # Código heredado y experimentación temprana
+│   └── streamlit_app.py     # MVP Inicial en Streamlit (Fase 4 - Inactivo)
 ├── scripts/
 │   ├── etl_pipeline.py      # Motor Universal ETL (Manejo de Memoria / Streaming)
 │   ├── train_amazon.py      # Orquestador del entrenamiento ALS
